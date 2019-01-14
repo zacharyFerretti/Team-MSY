@@ -1,0 +1,188 @@
+.foot a,.foot a:link,.foot a:visited,.foot a:active {
+	color: blue;
+	text-decoration: underline;
+}
+a:HOVER {
+font-weight: bold;
+}
+
+.foot a:hover {
+	color: #1e4c9a;
+	font-weight: bold;
+	text-decoration: underline;
+}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+	border: none;
+}
+
+.wrap{
+	width: 1400px;
+	margin: 0 auto;
+}
+
+.main{
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+	float: left;
+}
+.adL, .adR{
+	width:100px;
+	float: left;
+}
+.adL{
+	margin-right: 100px;
+        position: absolute;
+        float: right;
+	}
+.adR{
+	float:right;
+        position: absolute;
+}
+.adL img, .adR img{
+width: 100px;height: 100px;float: left;
+}
+.bannerM{
+	margin: 5px 200px 5px;
+	height: 700px;
+	width: 580px;
+}
+.bannerM span{
+	background-color: red;
+	color: white;
+	margin-left: 70px;
+	font-weight: bold;
+	margin-top: 5px;
+}
+.branchList{
+	width: 139px;
+	float:left;
+	margin-left: 0px;
+}
+.branchList .branch{
+	width: 132px;
+	margin-left: 5px;
+	float: left;
+}
+.branchList table{
+float:left;
+}
+.branchList table td{
+	border: 0;
+}
+.branch img{
+    width: 132px;
+	margin-left: 0px;
+}
+.branch li{
+	color: red;
+/*	white-space: nowrap;*/
+}
+.branch li a{
+	text-decoration: none;
+	color: red;
+}
+.branch li.head{
+	background-color: red;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+.branch li span.small{
+	font-size: 10px;
+}
+
+.homelinks ul{
+    list-style: none;
+}
+
+.homelinks ul li{
+    float:left;
+    width: 125px;
+    height: 150px;
+    margin: 5px;
+    list-style: none;
+    border: 2px solid #808080;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px grey;
+    background: #FFF;
+}
+
+.homelinks ul li:hover{
+    border-color: black;
+    box-shadow: none;
+}
+.homelinks ul li img {
+    margin: 2px;
+width: 110px;
+height: 93px;
+}
+.homelinks ul li span:first-child {
+text-align: center;
+font-size: 14px;
+width: 115px;
+float: left;
+}
+
+.homelinks ul li span {
+text-align: center;
+font-size: 12px;
+width: 115px;
+float: left;
+color: red;
+font-weight: bold;
+}
+
+
+.promo
+{
+	margin: 5px 0;
+	float:left;
+}
+.promo a{
+    margin-left: 5px;
+	}
+.promo span{
+    color: blue;
+}
+.foot{
+	float: left;
+	margin-left: 250px;
+	}
+	.foot a{
+		margin-left:20px;
+		margin-right: 20px;
+	}
+	.cr{
+	float: left;
+	margin-left: 400px;
+	}
+	.cr span{
+		color:blue;
+	}
+.social{
+	float:left;
+	margin-left: 480px;
+	margin-top: -230px;
+	width: 320px;
+	}
+	.social a img{
+	width: 120px;
+	height:40px;
+	}
+
+
+
+.counter{
+	width:200px;
+	float:left;
+}
+.counter img{
+	width: 16px;
+	height: 24px;
+}

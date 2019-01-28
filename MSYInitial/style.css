@@ -3,18 +3,20 @@ body, html {
   margin: 0;
 }
 
-.navbar{
+#navbar{
 	position: fixed;
-	top: 0;
-	width: 100%;
-	margin: 0px;
-	background-color: #000000;
-	padding-top: 20px;
+	text-align:center;
+	/*top: 0;*/
+	/*width: 100%;*/
+	margin: 0 auto;
+	/*padding-top: 20px;
 	padding-bottom: 20px;
-	padding = 20px;
+	padding = 20px;*/
 	visibility: hidden;
-
-
+	list-style: none;
+	width:750px;
+	list-style:none;
+	background-color: #000000;
 }
 
 .basketbar{
@@ -32,8 +34,19 @@ body, html {
 	color: white;
 	text-decoration: none;
 }
+#navbar li{
+	color:black;
+	float:left;
+}
+#navbar a{
+	color:black;
+	text-align:center;
+	text-decoration: normal;
+	display: block;
 
+}
 .navb:link {
+  	text-align: center;
   	color: white;
   	text-decoration: none;
   	font-family: 'Arvo', sans-serif;

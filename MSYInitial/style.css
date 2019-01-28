@@ -8,7 +8,7 @@ body, html {
 	top: 0;
 	width: 100%;
 	margin: 0px;
-	background-color: #000000;
+	background-color: rgb(75,75,75,.9);
 	padding-top: 20px;
 	padding-bottom: 20px;
 	padding = 20px;
@@ -23,7 +23,7 @@ body, html {
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
-	background-color: #000000;
+	background-color: dimgray;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -53,7 +53,7 @@ body, html {
 }
 
 .logobox{
-	height: 48px;
+	height: 44px;
   	width: 80px;
   	background-color: #d00040;
   	display:inline-block;
@@ -65,7 +65,7 @@ body, html {
 }
 
 .logo{
-	//text-align: sub;
+	/*text-align: sub;*/
 	color: white;
 	font-size: 30px;
 
@@ -111,17 +111,6 @@ p{
 	float: right;
   }
 
-  .navbar .search-container button {
-	float: right;
-	padding: 6px;
-	margin-top: 8px;
-	margin-right: 16px;
-	background: #d00040;
-	font-size: 17px;
-	border: none;
-	cursor: pointer;
-  }
-
   .navbar input[type=text] {
 	padding: 6px;
 	margin-top: 8px;
@@ -130,6 +119,7 @@ p{
   }
 
   .navbar .search-container button {
+  	color:white;
 	float: right;
 	padding: 6px;
 	margin-top: 8px;

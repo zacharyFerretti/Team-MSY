@@ -129,7 +129,8 @@ p{
 @media screen and (max-width: 600px) {
 	.navbar a:not(:first-child) {display: none;}
 	.navbar a.icon {
-		float:right;
+		color:white;
+		float:center;
 		display:block;
 	}
 	.navbar .search-container {

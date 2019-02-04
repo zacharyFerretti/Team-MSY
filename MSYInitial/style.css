@@ -7,6 +7,7 @@ body, html {
 /*General Navbar Styling*/
 
 .navbar{
+	z-index: 5;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -156,7 +157,6 @@ p{
 	border-radius: 0 3px 3px 0;
 	user-select: none;
 	cursor:pointer;
-	color:red;
 }
 .forwards{
 	right: 0;
@@ -170,11 +170,11 @@ p{
 .caption{
 	width:100%;
 	position:absolute;
-	bottom:8px;
-	padding: 8px 12px;
-	color:#b3b3b3;
+	bottom:3px;
+	color:#eaeaea;
 	font-size:18px;
 	text-align: center;
+	background-color: rgb(5,5,5,.65)
 }
 .index{
 	position:absolute;

@@ -40,18 +40,18 @@ function goToSlide(incrementor){
     slidePresented(currSlide);
 }
 function slidePresented(incrementor){
-    var circlePosition = document.getElementByClassName("slideCircle");
+    var circlePosition = document.getElementsByClassName("slideCircle");
 
-    var slides = document.getElementByClassName("slide");
-
+    var slides = document.getElementsByClassName("slide");
+    
     var index;
-
+    
     if(incrementor > slides.length) {
         currSlide=1;
     }if(incrementor < 1){
         currSlide = slides.length;
     }
-    for(i = 0; i<slidse.length; i++){
+    for(i = 0; i<slides.length; i++){
         slides[i].style.display = "none";
     }
     for(i = 0; i<circlePosition.length; i++){

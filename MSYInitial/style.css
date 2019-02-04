@@ -124,8 +124,80 @@ p{
 	filter:saturate(50%) brightness(200%);
 }
 
+/*Slideshow Styling*/
+.slide{
+	display:none;
+}
+.slideshowImage{
+	width:100%;
+	vertical-align: middle;
+}
+.slideshow{
+	max-width: 1000px;
+	position:relative;
+	margin:auto;
+	background-color: green;
+}
+.slideshowButtons{
+	text-align: center;
+}
 
+/*Forwards and backwards slideshow buttons*/
+.backwards, .forwards{
+	width:auto;
+	position:absolute;
+	margin-top: -22px;
+	top:50%;
+	padding:16px;
+	color:white;
+	font-weight: bold;
+	font-size: 18px;
+	transition:.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	cursor:pointer;
+	color:red;
+}
+.forwards{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.backwards:hover, .forwards:hover {
+	background-color: rgb(75,75,75,.75);
+}
 
+/*Slideshow Text styling*/
+.caption{
+	width:100%;
+	position:absolute;
+	bottom:8px;
+	padding: 8px 12px;
+	color:#b3b3b3;
+	font-size:18px;
+	text-align: center;
+}
+.index{
+	position:absolute;
+	top:0;
+	padding:8px 12px;
+	color:#b3b3b3;
+	font-size:15px;
+}
+
+/*Slideshow Underneath Index*/
+.slideCircle{
+	width:15px;
+	height:15px;
+	margin:0 2px;
+	display: inline-block;
+	border-radius: 50%;
+	transition:background-color .6s ease;
+	cursor:pointer;
+	background-color: #ccc
+}
+.active, .dot:hover {
+	background-color: #717171
+}
 @media screen and (max-width: 600px) {
 	.navbar a:not(:first-child) {display: none;}
 	.navbar a.icon {

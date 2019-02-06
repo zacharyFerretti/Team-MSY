@@ -11,6 +11,7 @@ body, html {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	min-height: 5.5%;
 	margin: 0px;
 	background-color: rgb(75,75,75,.9);
 	visibility: visible;
@@ -25,10 +26,10 @@ body, html {
 	color: white;
 	text-decoration: none;
 	font-family: 'Oswald', sans-serif;
-	padding-top: 15px;
-	padding-right: 30px;
-	padding-bottom: 10px;
-	padding-left: 30px;
+	padding-top: 1.5%;
+	padding-right: 3.0%;
+	padding-bottom: 1.0%;
+	padding-left: 3.0%;
 }
 .navLink:visited {
 	color: white;
@@ -43,22 +44,20 @@ body, html {
 /*Logo Styling*/
 
 .logobox{
-	height: 44px;
+	text-align: center;
+	height: inherit;
 	width: 80px;
 	background-color: #d00040;
 	display:inline-block;
-	padding-left: 20px;
 	margin-left: 30px;
-	padding-top: 2px;
-}
-.logo{
 	text-shadow: 1.25px 1.25px #b3b3b3;
 	color: white;
 	font-size: 30px;
 }
+/* I saw this, and I thought it was redundant, commenting it out as of Feb. 5th and its fine.
 .logo, .logobox, .navb{
 	visibility: visible;
-}
+}*/
 
 /*Basketbar Styling*/
 
@@ -97,7 +96,7 @@ p{
 
 /*Search Bar Styling*/
 
-.search-container {
+.search-bar {
 	float: right;
 }
 
@@ -108,7 +107,7 @@ p{
 	border: none;
 }
 
-.navbar .search-container button {
+.navbar .search-bar button {
 	color:white;
 	float: right;
 	padding: 6px;
@@ -120,7 +119,7 @@ p{
 	cursor: pointer;
 }
 
-.navbar .search-container button:hover {
+.navbar .search-bar button:hover {
 	background: #d00040;
 	filter:saturate(50%) brightness(200%);
 }
@@ -137,7 +136,7 @@ p{
 	width:100%;
 	position:relative;
 	margin:auto;
-	padding-top: 2.45%;
+	padding-top: 2.4%;
 }
 .slideshowButtons{
 	text-align: center;
@@ -198,36 +197,73 @@ p{
 .active, .dot:hover {
 	background-color: #717171
 }
+
+
 @media screen and (max-width: 600px) {
-	.navbar a:not(:first-child) {display: none;}
+	.logobox{
+		text-align: center;
+		width:100%;
+		margin-left: 0px;
+	}
+	.logo{
+		margin:auto;
+		width: 65%;
+	}
+	/*.navbar a:not(:first-child) {display: none;}*/
+	.slideshow{
+		width:100%;
+		position:relative;
+		margin:auto;
+		padding-top: 45%;
+	}
+	.backwards, .forwards{
+		width:auto;
+		position:absolute;
+		top:50%;
+		color:white;
+		font-weight: bold;
+		font-size: 18px;
+		transition:.6s ease;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+		cursor:pointer;
+	}
 	.navbar a.icon {
+		display:block;
 		color:white;
 		float:center;
 		display:block;
 	}
-	.navbar .search-container {
+	.navbar .search-bar {
 		float: none;
 	}
-	.navbar a, .navbar input[type=text], .navbar .search-container button {
+	.navbar input[type=text]{
+		display: inline-block;
+		width: 65%;
+		margin: 0px;
+		min-height: 5.5%;
+	}
+	.navbar .search-bar button{
+		display: inline-block;
+		width: 15%;
+		margin: 0px;
+		min-height: 5.5%;
+	}
+	.navLink:link {
+		color: white;
+		text-decoration: none;
+		font-family: 'Oswald', sans-serif;
+		padding-top: .5%;
+		padding-right: 0px;
+		padding-bottom: .5%;
+		padding-left: 0px;
+	}
+	.navbar a{
 		float: none;
 		display: block;
-		text-align: left;
+		text-align: center;
 		width: 100%;
 		margin: 0;
-		padding: 14px;
-	}
-}
-
-@media screen and (max-width: 600px){
-	.navbar.responsive{positon:relative;}
-	.navbar.responsive a.icon{
-		position: absolute;
-		right:0;
-		top:0;
-	}
-	.navbar.responsive a{
-		float:none;
-		display:block;
-		text-align:left;
+		min-height: 5.5%;
 	}
 }

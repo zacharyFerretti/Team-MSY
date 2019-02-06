@@ -1,20 +1,19 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang = "en">
-<meta charset="utf-8">
+
 
 <head>
+	<meta charset="utf-8">
 	<title>MSY</title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen">
-	<link href="https://fonts.googleapis.com/css?family=Arvo|Raleway" rel="stylesheet">
 </head>
 
 <body>	
-	<script> slidePresented(1); </script>
 	<div class="navbar" id="navbar">
 		<!--Part of our website with the logo on the top left and the 
 			navbar buttons on the sides. -->
 		<div class="logobox" id="logobox">
-			<a class="logo" id="logo">MSY</a>
+			MSY
 		</div>
 
 		<a class="navLink active" id="navPCC" href="#Home">PC COMPONENTS</a>
@@ -23,33 +22,34 @@
 		<a class="navLink" id="navACC" href="#Home">ACCESSORIES</a>			
 		<a class="navLink" id="navSAL" href="#Home">SALE</a>
 		
-		<!--Added this, it ought to be the small menu that comes on for small displays-->
+		<!--Added this, it ought to be the small menu that comes on for small displays
 		<a href="javascript:void(0);" class="icon" onclick="updateDisplay()">
 			&#9776;
-		</a>
+		</a>-->
 
 		<!--search bar-->
-		<div class="search-container" id="search-container">
-			<a class="search-container" id="search-container" href="#Home" style="visibility: visible;">
+		<div class="search-bar" id="searchBar">
+			<a class="search-bar" id="searchContainer" href="#Home" style="visibility: visible;">
 				<form action="action_page.php">
 					<input type="text" name="search">
 					<button type="submit">Search</button>
 				</form>
 			</a>
 		</div>
+		<br/>
 	</div>
 
 	<div class = "slideshow">
 		<div class = "slide">
-			<img src = "./images/bannertplink.jpg" class="slideshowImage">
+			<img src = "./images/bannertplink.jpg" class="slideshowImage" alt = "Christmas Sale">
 			<div class = "caption one">Sale One</div>
 		</div>
 		<div class = "slide">
-			<img src = "./images/banner 1224asus.jpg" class="slideshowImage">
+			<img src = "./images/banner1224asus.jpg" class="slideshowImage" alt = "Asus Sale">
 			<div class = "caption other">Sale Two</div>
 		</div>
 		<div class = "slide">
-			<img src = "./images/bannerphilips.jpg" class="slideshowImage">
+			<img src = "./images/bannerphilips.jpg" class="slideshowImage" alt = "Philips Sale">
 			<div class = "caption other">Sale Three</div>
 		</div>
 

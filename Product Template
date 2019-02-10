@@ -1,0 +1,49 @@
+    <span class = "productBox">
+		    	<img class="productImage" src="images/" alt="Laptop">
+		    	<div class="productName"></div>
+		    	<div class="productPrice">$</div>
+		    	<div class="addToBasketButton">ADD TO BASKET</div>
+		</span>	
+
+
+
+
+<!-- You only need 1 prodContainer to contain multiple items in a catagory-->
+	<div id="prodContainer" class="prodContainer">
+			<span class = "productBox">
+
+<!-- Fill in the src as "images/[FILENAME]", ideally a square image-->
+					<img class="productImage" src="images/">
+		    	
+<!-- Product title goes before "</div>". Don't worry about the length, it concatanates itself-->
+					<div class="productName"></div>
+          
+<!-- Price after the $ sign-->
+					<div class="productPrice">$</div>
+					<div class="addToBasketButton">ADD TO BASKET</div>
+			</span>	
+	</div
+		    
+        
+        
+<!-- For example...-->
+<div id="prodContainer" class="prodContainer">
+		<span class = "productBox">
+		    	<img class="productImage" src="images/lt.jpg" alt="Laptop">
+		    	<div class="productName">Laptop</div>
+		    	<div class="productPrice">AU$700</div>
+		    	<div class="addToBasketButton">ADD TO BASKET</div>
+    </span>	
+        
+          
+    <span class = "productBox">
+		    	<img class="productImage" src="images/" alt="Laptop">
+		    	<div class="productName"></div>
+		    	<div class="productPrice">$</div>
+		    	<div class="addToBasketButton">ADD TO BASKET</div>
+		</span>	
+</div>
+        
+        
+        
+<!-- Make a list of products in the format above-->

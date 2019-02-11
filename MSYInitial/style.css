@@ -324,8 +324,10 @@ p{
 	color: white;
 	background-color: #d00040;
 	padding: 3px 3px 3px 3px;
-
-
+}
+.productCategory{
+	font-family: 'Oswald', sans-serif;
+	font-size:100%;
 }
 
 @media screen and (max-width: 800px) {

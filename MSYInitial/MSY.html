@@ -6,13 +6,12 @@
 	<meta charset="utf-8">
 	<title>MSY</title>
 	<link rel="stylesheet" href="style.css" type="text/css" media="screen">
-	<script src="script.js"></script>
 </head>
 
 <body>	
-	
-	<!--This is the Navbar-->
 	<div class="navbar" id="navbar">
+		<!--Part of our website with the logo on the top left and the 
+			navbar buttons on the sides. -->
 		<div class="logobox" id="logobox">
 			MSY
 		</div>
@@ -22,15 +21,22 @@
 		<a class="navLink" id="navMOB" href="#Home">MOBILE</a>		
 		<a class="navLink" id="navACC" href="#Home">ACCESSORIES</a>			
 		<a class="navLink" id="navSAL" href="#Home">SALE</a>
+		
+		<!--Added this, it ought to be the small menu that comes on for small displays
+		<a href="javascript:void(0);" class="icon" onclick="updateDisplay()">
+			&#9776;
+		</a>-->
 
+		<!--search bar-->
 		<div class="search-bar" id="searchBar">
-			<div class="search-bar" id="searchContainer">
+			<a class="search-bar" id="searchContainer" href="#Home" style="visibility: visible;">
 				<form action="action_page.php">
 					<input type="text" name="search">
 					<button type="submit">Search</button>
 				</form>
-			</div>
-		</div> <br/>
+			</a>
+		</div>
+		<br/>
 	</div>
 
 	<div class = "slideshow">
@@ -278,7 +284,7 @@
 	</div>
 
 
-	
+	<h1> Find us at these locations, all across the Outback! </h1>
 	<div class ="map" id="map" href="#map">
 		<script src="Map.js"></script>
 
@@ -292,11 +298,13 @@
 
 		<a class="welcome" href="#Home">Welcome, guest</a>
 		<a id="bNo" class="basket">(0)</a>
-			<img id="bIcon" src="images/basket.png" class="bIcon"  onclick="expandBasket()">
-			<a id="basket" class="basket"  onclick="expandBasket()">Expand Basket</a>
+		<img id="bIcon" src="images/basket.png" class="bIcon"  onclick="expandBasket()">
+		<a id="basket" class="basket"  onclick="expandBasket()">Expand Basket</a>
 
-			<div id="emptyBasket" class="basketEmpty">Your basket is empty</div>
-			<div id="basketContainer" class="basketContainer"></div>
+		<div id="basketEmpty" class = "basketEmpty">Your basket is empty</div>
+		<div id="basketContainer" class="basketContainer">
+
+		</div>
 
 
 	</div>
@@ -304,5 +312,5 @@
 
 </body>
 
-<script src="scripts.js"></script>
+<script src="navscroll.js"></script>
 </html>

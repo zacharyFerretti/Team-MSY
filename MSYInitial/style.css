@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Arvo');
 body, html {
 	height: 100%;
 	margin: 0;
 }
-
+h1{
+	text-align: center;
+}
 /*General Navbar Styling*/
 
 .navbar{
@@ -290,8 +293,20 @@ body, html {
 	/* Basket Container*/
 
 
+	.basketEmpty{
+		display: none;
+		position: absolute;
+		left: 40%;
+		margin-left: -50px;
+		color: darkgrey;
+		font-size: 40px;
+		font-family: 'Arvo', sans-serif;
+
+
+	}
+
 	.basketContainer{
-		display: flex;
+		/*display: flex;*/
 		overflow-x: auto;
 		margin-top: 20px;
 		display: none;

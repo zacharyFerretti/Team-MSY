@@ -64,18 +64,24 @@ function itemScrollFunction(){
 
 
 //Basketbar JS
-var basketOpen = false;
+//expand basket
 
+var basketOpen = false;
 function expandBasket(){
+
     if (basketOpen == false) {
         basketOpen = true;
         document.getElementById("basketBar").style.height = "200px";
         document.getElementById("basketContainer").style.display = "flex";
+        document.getElementById("basketEmpty").style.display = "block";  
+        document.getElementById("basket").innerHTML = "Minimise Basket";                    
     }
     else{
         basketOpen = false;
         document.getElementById("basketBar").style.height = "20px";
         document.getElementById("basketContainer").style.display = "none";
+        document.getElementById("basketEmpty").style.display = "none"; 
+        document.getElementById("basket").innerHTML = "Expand Basket";        
     }
 }
 
@@ -89,7 +95,10 @@ for (var i = 0; i < removeButtons.length; i++ ) {
     })
 };
 
+// Clicking add on products
+
 var basket = [];
+var basketLength = 0;
 
 function addClicked(e){
 
@@ -99,7 +108,10 @@ function addClicked(e){
     addToBasket(name, price, src);
 
     basket.push(name);
-    document.getElementById("bNo").innerHTML = "("+ basket.length +")";
+    basketLength++;
+    document.getElementById("bNo").innerHTML = "("+ basketLength +")";
+
+    document.getElementById("basketEmpty").style.visibility = "hidden";  
 
 }
 
@@ -113,13 +125,24 @@ function addToBasket(name, price, src){
                                     <img class="basketImage" src="${src}" alt="Laptop">
                                     <div class="basketName">${name}</div>
                                     <div class="basketPrice">${price}</div>
-                                    <input class="basketQuantity" type="number" value=1>
-                                    <span class="basketRemove" onclick="parentElement.remove()">REMOVE</span>
+                                    <input class="basketQuantity" type="number" value=1 min="1" max="99">
+                                    <span class="basketRemove" onclick="parentElement.remove(); subtrBasket()" o>REMOVE</span>
 
                             `
-                            basketSlot.innerHTML = basketSlotContents;
+    basketSlot.innerHTML = basketSlotContents;
     basketItems.append(basketSlot);
 
+}
+
+
+
+function subtrBasket(){
+    basketLength= basketLength -1;
+    document.getElementById("bNo").innerHTML = "("+ basketLength +")";
+    if(basketLength ==0){
+        document.getElementById("basketEmpty").style.visibility = "visible";  
+
+    }
 }
 
 

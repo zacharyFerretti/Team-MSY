@@ -199,7 +199,7 @@ p{
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	.logobox{
 		text-align: center;
 		width:100%;
@@ -213,8 +213,8 @@ p{
 	.slideshow{
 		width:100%;
 		position:relative;
-		margin:auto;
-		padding-top: 45%;
+		/*margin:65% 0%;*/
+		padding-top: 5%;
 	}
 	.backwards, .forwards{
 		width:auto;

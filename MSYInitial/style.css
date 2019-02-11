@@ -292,6 +292,7 @@ h1{
 
 	/* Basket Container*/
 
+<<<<<<< HEAD
 
 	.basketEmpty{
 		display: none;
@@ -309,7 +310,23 @@ h1{
 		/*display: flex;*/
 		overflow-x: auto;
 		margin-top: 20px;
+=======
+	.basketEmpty{
+>>>>>>> 8b8b073e03032825db58d0c170abb1c63d73fbe5
 		display: none;
+		position: absolute;
+		left: 40%;
+		margin-left: -50px;
+		color: darkgrey;	
+		font-size: 40px;
+		font-family: 'Arvo', sans-serif;
+	}
+	
+	.basketContainer{
+			/*display: flex;*/
+			overflow-x: auto;
+			margin-top: 20px;
+			display: none;
 	}
 
 	.basketBox{

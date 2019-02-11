@@ -55,11 +55,15 @@ function expandBasket(){
         basketOpen = true;
         document.getElementById("basketBar").style.height = "200px";
         document.getElementById("basketContainer").style.display = "flex";
+        document.getElementById("basketEmpty").style.display = "block";  
+        document.getElementById("basket").innerHTML = "Minimise Basket";                    
     }
     else{
         basketOpen = false;
         document.getElementById("basketBar").style.height = "20px";
         document.getElementById("basketContainer").style.display = "none";
+        document.getElementById("basketEmpty").style.display = "none"; 
+        document.getElementById("basket").innerHTML = "Expand Basket";        
 
     }
 
@@ -67,15 +71,58 @@ function expandBasket(){
 }
 
 
-var removeButtons = document.getElementsByClassName('basketRemove');
-for (var i = 0; i < removeButtons.length; i++ ) {
-    var button = removeButtons[i];
-    button.addEventListener('click', function(){
-        var buttonClicked = event.target;
-        buttonClicked.parentElement.remove();
 
-    })
-};
+// Clicking add on products
+
+var basket = [];
+var basketLength = 0;
+
+function addClicked(e){
+
+    var name = e.parentElement.children[1].innerText;
+    var price = e.parentElement.children[2].innerText;
+    var src = e.parentElement.children[0].src;
+    addToBasket(name, price, src);
+
+    basket.push(name);
+    basketLength++;
+    document.getElementById("bNo").innerHTML = "("+ basketLength +")";
+
+    document.getElementById("basketEmpty").style.visibility = "hidden";  
+
+}
+
+function addToBasket(name, price, src){
+
+    var basketSlot = document.createElement('span');
+    basketSlot.setAttribute( 'class', 'basketBox' );
+    var basketItems = document.getElementsByClassName('basketContainer')[0];
+    var basketSlotContents = `
+
+                                    <img class="basketImage" src="${src}" alt="Laptop">
+                                    <div class="basketName">${name}</div>
+                                    <div class="basketPrice">${price}</div>
+                                    <input class="basketQuantity" type="number" value=1 min="1" max="99">
+                                    <span class="basketRemove" onclick="parentElement.remove(); subtrBasket()" o>REMOVE</span>
+
+                            `
+    basketSlot.innerHTML = basketSlotContents;
+    basketItems.append(basketSlot);
+
+}
+
+
+
+function subtrBasket(){
+    basketLength= basketLength -1;
+    document.getElementById("bNo").innerHTML = "("+ basketLength +")";
+    if(basketLength ==0){
+        document.getElementById("basketEmpty").style.visibility = "visible";  
+
+    }
+}
+
+
 
 /*
 var addButtons = document.getElementsByClassName('addToBasketButton');
@@ -91,52 +138,19 @@ for (var i = 0; i < addButtons.length; i++ ) {
         addToBasket(name, price, src);
     })
 };
+
+
+
+var removeButtons = document.getElementsByClassName('basketRemove');
+for (var i = 0; i < removeButtons.length; i++ ) {
+    var button = removeButtons[i];
+    button.addEventListener('click', function(){
+        var buttonClicked = event.target;
+        buttonClicked.parentElement.remove();
+
+    })
+};
 */
-
-
-var basket = [];
-
-function addClicked(e){
-
-    var name = e.parentElement.children[1].innerText;
-    var price = e.parentElement.children[2].innerText;
-    var src = e.parentElement.children[0].src;
-    addToBasket(name, price, src);
-
-    basket.push(name);
-    document.getElementById("bNo").innerHTML = "("+ basket.length +")";
-
-}
-
-function addToBasket(name, price, src){
-
-    var basketSlot = document.createElement('span');
-    basketSlot.setAttribute( 'class', 'basketBox' );
-    var basketItems = document.getElementsByClassName('basketContainer')[0];
-    var basketSlotContents = `
-
-                                    <img class="basketImage" src="${src}" alt="Laptop">
-                                    <div class="basketName">${name}</div>
-                                    <div class="basketPrice">${price}</div>
-                                    <input class="basketQuantity" type="number" value=1>
-                                    <span class="basketRemove" onclick="parentElement.remove()">REMOVE</span>
-
-                            `
-                            basketSlot.innerHTML = basketSlotContents;
-    basketItems.append(basketSlot);
-
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 

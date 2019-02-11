@@ -192,9 +192,19 @@ h1{
 /* Basket Container*/
 
 
+.basketEmpty{
+	display: none;
+  	position: absolute;
+  	left: 40%;
+  	margin-left: -50px;
+	color: darkgrey;	
+	font-size: 40px;
+  	font-family: 'Arvo', sans-serif;
+}
+
 .basketContainer{
-	display: flex;
-    overflow-x: auto;
+	/*display: flex;*/
+	margin: 0 auto;
     margin-top: 20px;
     display: none;
 }
